@@ -25,6 +25,12 @@ public class CarrinhoDeCompra {
             System.out.println("A lista está vazia!");
         }
     }
+    @Override
+    public String toString() {
+        return "CarrinhoDeCompra{" +
+                "itemList=" + itemList +
+                '}';
+    }
 
     public double calcularValorTotal(){
         //Inicializa a variável que irá armazenar o valor total como zero
@@ -43,4 +49,26 @@ public class CarrinhoDeCompra {
             throw new RuntimeException("Sua lista está vazia");
         }
     }
+
+    public static void main(String[] args) {
+        CarrinhoDeCompra carrinhoDeCompra = new CarrinhoDeCompra();
+
+        // Adicionando itens ao carrinho
+        carrinhoDeCompra.adicionarItem("Lápis", 2d, 3);
+        carrinhoDeCompra.adicionarItem("Lápis", 2d, 3);
+        carrinhoDeCompra.adicionarItem("Caderno", 35d, 1);
+        carrinhoDeCompra.adicionarItem("Borracha", 2d, 2);
+
+        // Exibindo os itens no carrinho    
+
+        // Removendo um item do carrinho
+        carrinhoDeCompra.removerItem("Lápis");
+
+        // Exibindo os itens atualizados no carrinho
+
+
+        // Calculando e exibindo o valor total da compra
+        System.out.println("O valor total da compra é = " + carrinhoDeCompra.calcularValorTotal());
+    }
 }
+
