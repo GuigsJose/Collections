@@ -1,0 +1,1 @@
+## Apenas para estudo de collections com exemplos práticos.
